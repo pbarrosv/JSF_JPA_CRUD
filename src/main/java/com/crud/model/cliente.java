@@ -26,6 +26,9 @@ public class Cliente {
 	private String apellidos;
 	
 	@Column
+	private String direccion;
+	
+	@Column
 	private String email;
 	
 	@Column
@@ -37,6 +40,13 @@ public class Cliente {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date facturacion;
 	
+	
+	public String getDireccion() {
+		return direccion;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -81,9 +91,11 @@ public class Cliente {
 	}
 	@Override
 	public String toString() {
-		return "cliente [id=" + id + ", nombres=" + nombres + ", apellidos=" + apellidos + ", email=" + email
-				+ ", telefono=" + telefono + ", fregistro=" + fregistro + ", facturacion=" + facturacion + "]";
+		return "Cliente [id=" + id + ", nombres=" + nombres + ", apellidos=" + apellidos + ", direccion=" + direccion
+				+ ", email=" + email + ", telefono=" + telefono + ", fregistro=" + fregistro + ", facturacion="
+				+ facturacion + "]";
 	}
+	
 	
 	
 }

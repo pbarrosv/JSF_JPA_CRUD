@@ -23,7 +23,7 @@ public class ClienteDao {
 		entity.getTransaction().begin();
 		entity.merge(clie);
 		entity.getTransaction().commit();
-		JPAUtil.shutdown();
+		//JPAUtil.shutdown();
 	}
 	
 	public Cliente findClie(Long id) {

@@ -26,10 +26,10 @@ public class ClienteDao {
 		JPAUtil.shutdown();
 	}
 	
-	public Cliente findClie(int id) {
+	public Cliente findClie(Long id) {
 		Cliente cl = new Cliente();
 		cl = entity.find(Cliente.class, id);
-		JPAUtil.shutdown();
+		//JPAUtil.shutdown();
 		return cl;
 	}
 	

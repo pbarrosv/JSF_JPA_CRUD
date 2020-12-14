@@ -12,7 +12,7 @@
 	<h2>
 		<h:outputText value="Lista Clientes"></h:outputText>
 	</h2>
-
+	<h:form>
 	<h:dataTable value="#{miBean.findAllClien()}" var="cliente" >
 		<h:column>
 			<f:facet name="header">Id</f:facet>
@@ -48,7 +48,9 @@
 		</h:column>
 		<h:column>
 			<f:facet name="header">Editar</f:facet>
+			<h:commandButton action="#{miBean.updateClie(cliente.id)}" value="Editar"></h:commandButton>
 		</h:column>
 	</h:dataTable>
+	</h:form>
 </h:body>
 </html>

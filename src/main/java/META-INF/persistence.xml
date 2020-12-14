@@ -10,7 +10,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jsf_jpa_crud" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jsf_jps_crud?serverTimezone=UTC" />
       <property name="javax.persistence.jdbc.user" value="root" />
       <property name="javax.persistence.jdbc.password" value="sasa" />
       <property name="hibernate.show_sql" value="true" />

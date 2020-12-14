@@ -33,10 +33,10 @@ public class ClienteDao {
 		return cl;
 	}
 	
-	public List<Cliente> findAllClie(int id) {
+	public List<Cliente> findAllClie() {
 		
-		List<Cliente> Listcl = new ArrayList<Cliente>();
-		Query q = entity.createQuery("Select c from Cliente c");
+		List<Cliente> Listcl = new ArrayList<>();
+		Query q = entity.createQuery("SELECT c FROM Cliente c"); 
 		Listcl = q.getResultList();
 		return Listcl;
 	}

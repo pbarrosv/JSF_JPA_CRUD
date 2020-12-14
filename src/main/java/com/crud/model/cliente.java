@@ -11,8 +11,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity
-@Table(name = "clientes")
+@Entity(name = "ZXC")
+@Table(name ="clientes")
 public class Cliente {
 	
 	@Id 
@@ -41,6 +41,21 @@ public class Cliente {
 	private Date facturacion;
 	
 	
+	public Cliente() {
+	}
+	
+	public Cliente(Long id, String nombres, String apellidos, String direccion, String email, String telefono,
+			Date fregistro, Date facturacion) {
+		super();
+		this.id = id;
+		this.nombres = nombres;
+		this.apellidos = apellidos;
+		this.direccion = direccion;
+		this.email = email;
+		this.telefono = telefono;
+		this.fregistro = fregistro;
+		this.facturacion = facturacion;
+	}
 	public String getDireccion() {
 		return direccion;
 	}

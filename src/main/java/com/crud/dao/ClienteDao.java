@@ -13,9 +13,9 @@ public class ClienteDao {
 	EntityManager entity = JPAUtil.getEntityManagerFactory().createEntityManager();
 	
 	public void saverClie(Cliente clie) {
-		entity.getTransaction().begin();/*Empezamos una transacci´ón*/
-		entity.persist(clie); /*Persistir el objeto*/
-		entity.getTransaction().commit();/*Cerrar la transacción y guardar en la BD*/
+		entity.getTransaction().begin();
+		entity.persist(clie); 
+		entity.getTransaction().commit();
 		JPAUtil.shutdown();
 	}
 	
@@ -36,7 +36,7 @@ public class ClienteDao {
 	public List<Cliente> findAllClie() {
 		
 		List<Cliente> Listcl = new ArrayList<>();
-		Query q = entity.createQuery("SELECT c FROM Cliente c"); 
+		Query q = entity.createQuery("Select c From ZXC c"); 
 		Listcl = q.getResultList();
 		return Listcl;
 	}

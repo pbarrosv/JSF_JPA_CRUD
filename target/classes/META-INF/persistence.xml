@@ -5,9 +5,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   version="2.1">
 
   <persistence-unit name="PERSISTENCE">
-    <description> Crud básico Hibernate JPA</description>
+    <description> Crud Hibernate JPA</description>
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-
+    
+	<class>com.crud.model.Cliente</class>
+	
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jsf_jps_crud?serverTimezone=UTC" />

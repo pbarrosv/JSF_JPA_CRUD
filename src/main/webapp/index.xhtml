@@ -13,7 +13,7 @@
 		<h:outputText value="Lista Clientes"></h:outputText>
 	</h2>
 
-	<h:dataTable value="#{clienteBean.findAllClientes()}" var="cliente" border="1">
+	<h:dataTable value="#{miBean.findAllClien()}" var="cliente" >
 		<h:column>
 			<f:facet name="header">Id</f:facet>
 			<h:outputText value="#{cliente.id}"></h:outputText>

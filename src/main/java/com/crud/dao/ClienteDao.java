@@ -16,7 +16,7 @@ public class ClienteDao {
 		entity.getTransaction().begin();
 		entity.persist(clie); 
 		entity.getTransaction().commit();
-		JPAUtil.shutdown();
+		//JPAUtil.shutdown();
 	}
 	
 	public void editClie(Cliente clie) {
@@ -39,5 +39,13 @@ public class ClienteDao {
 		Query q = entity.createQuery("Select c From ZXC c"); 
 		Listcl = q.getResultList();
 		return Listcl;
+	}
+	
+	public void deleteClie(Long id) {
+		Cliente cl = new Cliente();
+		cl = entity.find(Cliente.class, id);
+		entity.getTransaction().begin();
+		entity.remove(cl);
+		entity.getTransaction().commit();
 	}
 }
